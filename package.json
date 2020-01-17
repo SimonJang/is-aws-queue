@@ -1,6 +1,6 @@
 {
 	"name": "is-aws-queue",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Utility function to check if a queue name is a valid AWS SQS name",
 	"license": "MIT",
 	"repository": "SimonJang/is-aws-queue",
