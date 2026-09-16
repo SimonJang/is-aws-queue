@@ -29,6 +29,7 @@ test('accepts valid FIFO queue names within the shared limit', () => {
 test('rejects malformed or oversized FIFO queue names', () => {
 	assert.equal(isAwsQueue('.fifo'), false);
 	assert.equal(isAwsQueue('orders..fifo'), false);
+	assert.equal(isAwsQueue('orders/fifo'), false);
 	assert.equal(isAwsQueue('orders.FIFO'), false);
 	assert.equal(isAwsQueue('orders.fifo.extra'), false);
 	assert.equal(isAwsQueue('a'.repeat(76) + '.fifo'), false);
