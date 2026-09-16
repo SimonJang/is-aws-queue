@@ -3,7 +3,11 @@
 	"version": "1.0.1",
 	"description": "Utility function to check if a queue name is a valid AWS SQS name",
 	"license": "MIT",
-	"repository": "SimonJang/is-aws-queue",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SimonJang/is-aws-queue.git"
+	},
+	"packageManager": "npm@12.0.1",
 	"author": {
 		"name": "Simon Jang",
 		"email": "simon.jang.contact@gmail.com",
@@ -13,7 +17,8 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "prettier --write \"**/*.js\" && xo && ava"
+		"test": "node --test",
+		"prepublishOnly": "npm test"
 	},
 	"files": [
 		"index.js"
@@ -22,10 +27,5 @@
 		"AWS",
 		"SQS",
 		"validation"
-	],
-	"devDependencies": {
-		"ava": "^2.1.0",
-		"prettier": "^1.19.1",
-		"xo": "^0.24.0"
-	}
+	]
 }
